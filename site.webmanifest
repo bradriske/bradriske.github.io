@@ -1,12 +1,13 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "Riske.dev",
+  "name": "Riske.dev",
+  "display": "standalone",
   "icons": [{
     "src": "android-chrome-192x192.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "/",
   "background_color": "#fafafa",
   "theme_color": "#fafafa"
 }
