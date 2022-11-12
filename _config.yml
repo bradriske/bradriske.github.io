@@ -21,20 +21,27 @@
 title: Riske.dev
 email: brad@riske.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://riske.dev" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: bradriske
-github_username:  bradriske
-instagram_username: riskeleather
-linkedin_username: bradriske
+
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+
+minima:
+  skin: auto
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    - { platform: twitter,        user_url: "https://twitter.com/bradriske" }
+    - { platform: instagram,      user_url: "https://www.instagram.com/riskeleather" }
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/bradriske" }
+    - { platform: github,         user_url: "https://github.com/bradriske" }
+    - { platform: mastodon,       user_url: "https://hachyderm.io/@bradriske" }
 
 # Exclude from processing.
 # The following items will not be processed, by default.
