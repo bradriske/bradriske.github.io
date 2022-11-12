@@ -21,7 +21,7 @@
 title: Riske.dev
 email: brad@riske.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  Test
+  Yes, yes it is Riske business
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://riske.dev" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -45,7 +45,7 @@ minima:
     - { platform: linkedin,       user_url: "https://www.linkedin.com/in/bradriske" }
     - { platform: github,         user_url: "https://github.com/bradriske" }
     - { platform: mastodon,       user_url: "https://hachyderm.io/@bradriske" }
-    - { platform: rss,       user_url: "https://riske.dev/feed.xml" }
+    - { platform: rss,            user_url: "https://riske.dev/feed.xml" }
 
 # Exclude from processing.
 # The following items will not be processed, by default.
