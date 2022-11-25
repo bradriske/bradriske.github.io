@@ -3,7 +3,7 @@ layout: page
 title: Homebridge on TrueNAS Scale
 ---
 
-This post is going to cover how to setup [Homebridge](https://homebridge.io) on TrueNAS Scale. The directions here apply to version 22.02.4 of TrueNAS scale and may need to be adjusted slightly if running a newer version. Homebridge allows you to take your IoT devices that don't currently have Apple HomeKit support and add them to HomeKit.  TrueNAS Scale doesn't have an official app for Homebridge or one in the TrueCharts repo.  Thankfully Homebridge does have a Docker implementation so you can add it to TrueNAS manually.
+This post is going to cover how to setup [Homebridge](https://homebridge.io){:target="_blank" rel="noopener"} on TrueNAS Scale. The directions here apply to version 22.02.4 of TrueNAS scale and may need to be adjusted slightly if running a newer version. Homebridge allows you to take your IoT devices that don't currently have Apple HomeKit support and add them to HomeKit.  TrueNAS Scale doesn't have an official app for Homebridge or one in the TrueCharts repo.  Thankfully Homebridge does have a Docker implementation so you can add it to TrueNAS manually.
 
 ## Disable mDNS
 Homebridge runs its own internal copy of mDNS, so if you leave mDNS enabled inside of TrueNAS as well it will generate a large amount of errors in the Homebridge logs and may not actually start. Disabling this may impact your TrueNAS setup depending, but that will depend on how you have TrueNAS configured as well as your larger overall network configuration.  From the TrueNAS help popup: "Multicast DNS. Uses the system Hostname to advertise enabled and running services. For example, this controls if the server appears under Network on MacOS clients."
@@ -37,7 +37,7 @@ Now that a storage location is configured, change to the Applications menu and s
 
 ![Launch Docker Image button](/assets/images/2022-11-25-Homebridge-on-TrueNAS-Scale/LaunchDockerImage.png)
 
-In the Launch Docker Image flyout setup the docker container.  The below settings are the defaults as provided by the docker repo page on [github](https://github.com/oznu/docker-homebridge/wiki/Homebridge-on-TrueNAS-Scale).  Any items not specified can be left as the default, adjust the settings as needed to fit your setup.
+In the Launch Docker Image flyout setup the docker container.  The below settings are the defaults as provided by the docker repo page on [github](https://github.com/oznu/docker-homebridge/wiki/Homebridge-on-TrueNAS-Scale){:target="_blank" rel="noopener"}.  Any items not specified can be left as the default, adjust the settings as needed to fit your setup.
 
 - Application Name
   - Application Name: homebridge 
@@ -86,4 +86,4 @@ If the logs keep scrolling and there are messages about mDNS that is because the
 If the logs are indicating there are permissions issue, make sure that the dataset setup earlier is accessible.  The app will default to using the root user, if the setting to override the Container User and Group ID was changed in the Workload Details section when setting up the container this may also cause issues with permissions in the container.
 
 ## Jobs Done
-At this point you have is an active up and running instance of Homebridge running on Docker in TrueNAS scale using port 8581.  To access the web UI open a browser to http://IP_ADDRESS:8581 replacing IP_ADDRESS here with the IP of your TrueNAS Scale server.  The details of setting up that instance will be specific to you, and more details on that setup can be found on the [Homebride Wiki](https://github.com/homebridge/homebridge/wiki)
+At this point you have is an active up and running instance of Homebridge running on Docker in TrueNAS scale using port 8581.  To access the web UI open a browser to http://IP_ADDRESS:8581 replacing IP_ADDRESS here with the IP of your TrueNAS Scale server.  The details of setting up that instance will be specific to you, and more details on that setup can be found on the [Homebridge Wiki](https://github.com/homebridge/homebridge/wiki){:target="_blank" rel="noopener"}
